@@ -1,8 +1,9 @@
 import React from "react";
-import { View,Text } from "react-native";
+import { View,Text, StatusBar,SafeAreaView } from "react-native";
 
 export default function Login(){
     return(
-        <View><Text>Aqui será a pagina de login</Text></View>
+        <View><Text>Aqui será a pagina de login</Text>
+        </View>
     )
 }
