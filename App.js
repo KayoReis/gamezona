@@ -1,24 +1,50 @@
 //imports
 import React from 'react';
-import { StyleSheet,StatusBar,Image,View } from 'react-native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { StyleSheet,StatusBar,Image,View,Button } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './src/pages/Home/home_index'
 import Shop from './src/pages/Shop/shop_index'
-import { NavigationContainer,DarkTheme,DefaultTheme } from '@react-navigation/native';
+import { NavigationContainer} from '@react-navigation/native';
 import Login from './src/pages/Login/Login_index'
 import Perfil from './src/pages/Perfil/perfil_index';
 import Community from './src/pages/Community/community_index';
 import Game from './src/pages/Game/game_index';
+import { useState } from 'react';
 //constates e variaveis
 const Tab=createBottomTabNavigator()
+//tema
+const Temaclaro = {
+  dark:false,
+  colors: {
+    background: 'rgb(192,192,192)',
+    card: 'rgb(128,128,128)',
+    text: 'rgb(0,0,0)',
+    border: 'rgb(0,0,0)',
+    notification: 'rgb(255,0,0)'
+  },
+};
+const Temaescuro = {
+  dark:true,
+  colors: {
+    background: 'rgb(0,0,0)',
+    card: 'rgb(54,54,54)',
+    text: 'rgb(0,0,0)',
+    border: 'rgb(255,255,255)',
+    notification: 'rgb(255,0,0)'
+  },
+};
+
 //functions
 //executavel
 export default function App(){
+  const [Esquemacor,setEsquemacor]=useState(false);
   return (
     //login na navegção apenas para teste
-    <NavigationContainer theme={DefaultTheme}  >
-      <StatusBar barStyle={'light-content'}/>
+    <NavigationContainer theme={Esquemacor? Temaescuro:Temaclaro}  >
+      <StatusBar hidden={true}  />
+      <View>
+        <Button title='press' onPress={()=>setEsquemacor(Esquemacor===false?true:false)} />
+      </View>
       <Tab.Navigator screenOptions={{headerShown: false, tabBarShowLabel:false}} >
       <Tab.Screen name='Login' component={Login} />
 
