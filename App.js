@@ -2,6 +2,7 @@
 import React from 'react';
 import { StyleSheet,StatusBar,Image,View,Button } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 import Home from './src/pages/Home/home_index'
 import Shop from './src/pages/Shop/shop_index'
 import { NavigationContainer} from '@react-navigation/native';
@@ -10,8 +11,10 @@ import Perfil from './src/pages/Perfil/perfil_index';
 import Community from './src/pages/Community/community_index';
 import Game from './src/pages/Game/game_index';
 import { useState } from 'react';
+import Cadastro from './src/pages/Cadastro/Cadastro_index';
 //constates e variaveis
 const Tab=createBottomTabNavigator()
+const Stack=createStackNavigator()
 //tema
 const Temaclaro = {
   dark:false,
@@ -46,7 +49,8 @@ export default function App(){
         <Button title='press' onPress={()=>setEsquemacor(Esquemacor===false?true:false)} />
       </View>
       <Tab.Navigator screenOptions={{headerShown: false, tabBarShowLabel:false}} >
-      <Tab.Screen name='Login' component={Login} />
+      <Stack.Screen name='Login' component={Login} />
+      <Stack.Screen name='Cadastro' component={Cadastro}/>
 
 
 
