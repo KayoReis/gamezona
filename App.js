@@ -12,9 +12,11 @@ import Community from './src/pages/Community/community_index';
 import Game from './src/pages/Game/game_index';
 import { useState } from 'react';
 import Cadastro from './src/pages/Cadastro/Cadastro_index';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 //constates e variaveis
 const Tab=createBottomTabNavigator()
-const Stack=createStackNavigator()
+const LoginStack=createNativeStackNavigator()
 //tema
 const Temaclaro = {
   dark:false,
@@ -38,20 +40,28 @@ const Temaescuro = {
 };
 
 //functions
+export function LoginStackScreen(){
+  return(
+  <LoginStack.Navigator screenOptions={{headerShown: false, animation:'none'}} initialRouteName='Login'>
+      <LoginStack.Screen name="Login" component={Login}/>
+      <LoginStack.Screen name="Cadastro" component={Cadastro}/>
+  </LoginStack.Navigator>
+  )
+}
 //executavel
 export default function App(){
   const [Esquemacor,setEsquemacor]=useState(false);
   return (
     //login na navegção apenas para teste
     <NavigationContainer theme={Esquemacor? Temaescuro:Temaclaro}  >
+      
       <StatusBar hidden={true}  />
       <View>
         <Button title='press' onPress={()=>setEsquemacor(Esquemacor===false?true:false)} />
       </View>
       <Tab.Navigator screenOptions={{headerShown: false, tabBarShowLabel:false}} >
-      <Stack.Screen name='Login' component={Login} />
-      <Stack.Screen name='Cadastro' component={Cadastro}/>
-
+      <Tab.Screen name='LoginStack' component={LoginStackScreen} />
+      
 
 
       <Tab.Screen name='Home' component={Home} options={{

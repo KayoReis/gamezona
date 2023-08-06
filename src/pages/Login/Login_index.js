@@ -1,17 +1,13 @@
 import React from "react";
 import { View,Text,Image,Button,TextInput } from "react-native";
-import { createStackNavigator } from "@react-navigation/stack";
-import Cadastro from "../Cadastro/Cadastro_index";
 
-const Stack = createStackNavigator();
+
+export const LoginStack = createNativeStackNavigator
 
 
 export default function Login({navigation}){
     return(
         <View>
-            <Stack.Navigator>
-                <Stack.Screen name="Cadastro" component={Cadastro}/>
-            </Stack.Navigator>
             <View>
                 <Image source={require('../../img/perfil_selected.png')}/>
             </View>
@@ -24,7 +20,7 @@ export default function Login({navigation}){
             </View>
             <View>
                 <Button title="Esqueceu a senha?"/>
-                <Button title="Cadastrar" onPress={()=>navigation.navigate('Cadastro',{screen:'Cadastro'})}/>
+                <Button title="Cadastart" onPress={()=>navigation.navigate('Cadastro')}/>
             </View>
             <View>
                 <Image source={require('../../img/Greenhill.png')}/>
