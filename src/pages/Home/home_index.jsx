@@ -1,5 +1,8 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
+import Carousel from "../../Components/Carousel";
+
+const slides = ['require("../../img/Home_carrousel/Geraldao.jpg")','require("../../img/Home_carrousel/Geraldao.jpg")']
 
 
 export default function Home() {
@@ -28,14 +31,10 @@ export default function Home() {
                         Notícias
                     </Text>
                     <View>
-                        
+                       
                     </View>
                 </View>
             </View>
-
-            <Text>
-                essa é a pagina inicial após login
-            </Text>
         </View>
     )
 }

@@ -1,13 +1,84 @@
 import React from "react";
-import { View,Text,Image } from "react-native";
+import { View, Text, Image, Button, ScrollView } from "react-native";
 
-export default function Perfil(){
-    return(
-        <View style><Text>Essa é a página de perfil</Text>
-        <Image source={require('../../img/among-us-fortnite.gif')} style={{borderRadius:5000}}/>
-        <View style={{paddingLeft:'20%'}}>
-        <Image source={require('../../img/Home_initial/Spider.jpg')} style={{borderRadius:200,width:200,height:200,padding:100}}/>
-        </View>
-        </View>
+export default function Perfil() {
+    return (
+        <ScrollView>
+            <View>
+                <View>
+                    <Image source={require('../../img/perfil_selected.png')} />
+                </View>
+                <View>
+                    <Text> Nickname</Text>
+                </View>
+                <View>
+                    <View>
+                        <View>
+                            <Image source={require('../../img/perfil_selected.png')} />
+                        </View>
+                        <Text>
+                            Playstation_nick
+                        </Text>
+                    </View>
+                    <View>
+                        <View>
+                            <Image source={require('../../img/perfil_selected.png')} />
+                        </View>
+                        <Text>
+                            Xbox_nick
+                        </Text>
+                    </View>
+                    <View>
+                        <View>
+                            <Image source={require('../../img/perfil_selected.png')} />
+                        </View>
+                        <Text>
+                            Steam_nick
+                        </Text>
+                    </View>
+                    <View>
+                        <View>
+                            <Image source={require('../../img/perfil_selected.png')} />
+                        </View>
+                        <Text>
+                            Nintendo_nick
+                        </Text>
+                    </View>
+
+                </View>
+                <View>
+                    <View>
+                        <Button title="Editar perfil" />
+                        <Button title="Conectar contas" />
+                    </View>
+                </View>
+            </View>
+            <View>
+                <View>
+                    <View>
+                        <Text>27</Text>
+                        <Text>Consquitas</Text>
+                    </View>
+                    <View>
+                        <Text>98</Text>
+                        <Text>Jogos</Text>
+                    </View>
+                </View>
+                <View>
+                    <View>
+                        <Text>Carousel_Playstation</Text>
+                    </View>
+                    <View>
+                        <Text>Carousel_Steam</Text>
+                    </View>
+                    <View>
+                        <Text>Carousel_Xbox</Text>
+                    </View>
+                    <View>
+                        <Text>Carousel_Nintendo</Text>
+                    </View>
+                </View>
+            </View>
+        </ScrollView>
     )
 }

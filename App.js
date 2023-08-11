@@ -12,11 +12,11 @@ import Community from './src/pages/Community/community_index';
 import Game from './src/pages/Game/game_index';
 import { useState } from 'react';
 import Cadastro from './src/pages/Cadastro/Cadastro_index';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 //constates e variaveis
 const Tab=createBottomTabNavigator()
-const LoginStack=createNativeStackNavigator()
+const LoginStack=createStackNavigator()
 //tema
 const Temaclaro = {
   dark:false,
