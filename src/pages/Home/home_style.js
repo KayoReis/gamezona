@@ -1,5 +1,9 @@
 import { StyleSheet } from "react-native";
 
-const style = StyleSheet.create({
-    
+export const style = StyleSheet.create({
+    image:{
+        width:'100%',
+        height: "56%",
+           
+    }
 })

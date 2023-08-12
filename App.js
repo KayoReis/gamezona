@@ -93,10 +93,3 @@ export default function App(){
   );
 }
 //estilo da pagina
-const style = StyleSheet.create({
-  containe:{
-    paddingVertical:10,
-    paddingHorizontal:20,
-    backgroundColor: "#000000"
-  }
-})

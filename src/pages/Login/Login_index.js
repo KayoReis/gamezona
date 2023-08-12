@@ -22,7 +22,7 @@ export default function Login({navigation}){
                 <Button title="Cadastart" onPress={()=>navigation.navigate('Cadastro')}/>
             </View>
             <View>
-                <Image source={require('../../img/Greenhill.png')}/>
+                <Image source={require('../../img/Greenhill.png')} style={{width:'100%',height:'64%'}}/>
             </View>
             
         </View>
