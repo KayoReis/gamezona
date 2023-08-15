@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Image, Text, ScrollView, useWindowDimensions } from "react-native";
+import { StyleSheet, View, Image, ScrollView, useWindowDimensions } from "react-native";
 
 export default function Carousel({ data }) {
     const[newData] = useState([{ key: 'spacer-left' }, ...data, { key: 'spacer-right' }])
@@ -26,12 +26,12 @@ export default function Carousel({ data }) {
 
 const styles = StyleSheet.create({
     imageContainer: {
-        borderRadius: 55,
+        borderRadius: 0,
         overflow: 'hidden'
     },
     image: {
-        width: '100%',
-        height: "72%",
+        width: '95%',
+        height: undefined,
         aspectRatio: 1,
     }
 })

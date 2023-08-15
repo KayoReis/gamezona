@@ -1,5 +1,5 @@
 //imports
-import React from 'react';
+import React, { useCallback } from 'react';
 import { StyleSheet,StatusBar,Image,View,Button } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -12,8 +12,9 @@ import Community from './src/pages/Community/community_index';
 import Game from './src/pages/Game/game_index';
 import { useState } from 'react';
 import Cadastro from './src/pages/Cadastro/Cadastro_index';
+import { Esquemacor } from './src/pages/Perfil/perfil_index';
 
-
+var auxilio = false
 //constates e variaveis
 const Tab=createBottomTabNavigator()
 const LoginStack=createStackNavigator()
@@ -50,15 +51,19 @@ export function LoginStackScreen(){
 }
 //executavel
 export default function App(){
-  const [Esquemacor,setEsquemacor]=useState(false);
+  if(Esquemacor==true){
+    auxilio= Temaescuro
+
+  }else{
+    auxilio= Temaclaro
+  }
+  
   return (
     //login na navegção apenas para teste
-    <NavigationContainer theme={Esquemacor? Temaescuro:Temaclaro}  >
+    <NavigationContainer theme={auxilio}  >
       
       <StatusBar hidden={true}  />
-      <View>
-        <Button title='press' onPress={()=>setEsquemacor(Esquemacor===false?true:false)} />
-      </View>
+     
       <Tab.Navigator screenOptions={{headerShown: false, tabBarShowLabel:false}} >
       <Tab.Screen name='LoginStack' component={LoginStackScreen} />
       

@@ -1,13 +1,30 @@
-import React from "react";
-import { View, Text, Image, Button, ScrollView } from "react-native";
+import React,{useState} from "react";
+import { View, Text, Image, Button, ScrollView,Pressable } from "react-native";
+import _default from "react-native-restart";
+
+
+
+export var Esquemacor = true
 
 export default function Perfil() {
+    [Esquemacor,setEsquemacor]=useState(null)
+    
     return (
+        
         <ScrollView>
             <View>
-                <View>
-                    <Image source={require('../../img/perfil_selected.png')} />
+                <View style={{marginStart:370}}>
+                    <Pressable onPress={()=> {setEsquemacor(Esquemacor===false?true:false);}}>
+                    <Image source={require('../../img/Config.png')} style={{width:32,height:32}}/>
+                </Pressable>
                 </View>
+                <View>
+                    <Pressable onPress={()=> alert(Esquemacor)}>
+                    
+                    <Image source={require('../../img/perfil_selected.png')} style={{width:200,height:200,borderRadius:100,}} />
+                    </Pressable>               
+                </View>
+
                 <View>
                     <Text> Nickname</Text>
                 </View>

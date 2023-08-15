@@ -11,8 +11,8 @@ export default function Login({navigation}){
                 <Image source={require('../../img/perfil_selected.png')} style={{ width: 200, height: 200,}}/>
             </View>
             <View>
-                <View><Text>E-mail</Text><TextInput></TextInput></View>
-                <View><Text>Senha</Text><TextInput></TextInput></View>
+                <View><TextInput placeholder="E-mail/nick"/></View>
+                <View><TextInput placeholder="Senha"/></View>
             </View>
             <View>
                 <Button title="Start"/>

@@ -1,10 +1,13 @@
 import React from "react";
-import { View, Text, Image, ScrollView } from "react-native";
+import { View, Text, Image, ScrollView,useWindowDimensions } from "react-native";
 import Carousel from "../../Components/Carousel";
+import { style } from "./home_style";
 
 
 
 export default function Home() {
+    const {height}=useWindowDimensions()
+    const SIZE = height*0.30
     const data = [{ image: require('../../img/Home_carrousel/Geraldao.jpg') },
     {
         image: require("../../img/Home_carrousel/Geraldao.jpg")
@@ -47,7 +50,7 @@ export default function Home() {
                 
                 <View>
                     <View>
-                        <Image source={require("../../img/Home_initial/Spider.jpg")} style={{ width: "100%", height: undefined, aspectRatio: 1.7 }} />
+                        <Image source={require("../../img/Home_initial/Spider.jpg")} style={{ width: "100%", height: SIZE }} />
                     </View>
                     <View>
                         <Text>Ultima vez jogado: xx/xx/xxxx-xx:xx
