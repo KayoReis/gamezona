@@ -2,10 +2,12 @@ import React from "react";
 import { View, Text, Image, ScrollView,useWindowDimensions } from "react-native";
 import Carousel from "../../Components/Carousel";
 import { style } from "./home_style";
-
+import { useContext } from "react";
+import ThemeContext from "../../Components/context/Theme";
 
 
 export default function Home() {
+    const theme = useContext(ThemeContext)
     const {height}=useWindowDimensions()
     const SIZE = height*0.30
     const data = [{ image: require('../../img/Home_carrousel/Geraldao.jpg') },
@@ -15,7 +17,6 @@ export default function Home() {
     { image: require("../../img/Home_carrousel/Geraldao.jpg") }];
 
     let numero = Math.floor(Math.random() * (5 - 1 + 1) + 1);
-    alert(numero);
     let gif;
     let teste ='Foda-se'
     switch (numero) {
@@ -43,8 +44,8 @@ export default function Home() {
             <View>
                 <View>
                     <View id="fi"></View>
-                    <Text>Bem-Vindo de volta, {teste}</Text>
-                    <Text>Qual a boa?</Text>
+                    <Text style={[{color:theme.color}]}>Bem-Vindo de volta, {teste}</Text>
+                    <Text style={[{color:theme.color}]}>Qual a boa?</Text>
                 </View>
                 {gif}
                 
@@ -53,17 +54,17 @@ export default function Home() {
                         <Image source={require("../../img/Home_initial/Spider.jpg")} style={{ width: "100%", height: SIZE }} />
                     </View>
                     <View>
-                        <Text>Ultima vez jogado: xx/xx/xxxx-xx:xx
+                        <Text style={[{color:theme.color}]}>Ultima vez jogado: xx/xx/xxxx-xx:xx
                         </Text>
-                        <Text>
+                        <Text style={[{color:theme.color}]}>
                             Ultima Conquista: xxxxxxxxxx
                         </Text>
-                        <Text>
+                        <Text style={[{color:theme.color}]}>
                             Progresso: xx%
                         </Text>
                     </View>
                     <View>
-                        <Text>
+                        <Text style={[{color:theme.color}]}>
                             Notícias
                         </Text>
                         <View style={{ height: "74%" }}>
