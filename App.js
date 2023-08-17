@@ -1,6 +1,6 @@
 //imports
-import React, { useCallback, useContext, useEffect } from 'react';
-import { StyleSheet, StatusBar, Image, View, Button } from 'react-native';
+import React, {useEffect } from 'react';
+import { StatusBar, Image, View} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './src/pages/Home/home_index'
@@ -12,7 +12,6 @@ import Community from './src/pages/Community/community_index';
 import Game from './src/pages/Game/game_index';
 import { useState } from 'react';
 import Cadastro from './src/pages/Cadastro/Cadastro_index';
-import { troca } from './src/pages/Perfil/perfil_index';
 import Theme from './src/Components/Esquemacor';
 import ThemeContext from './src/Components/context/Theme';
 import { EventRegister } from "react-native-event-listeners";

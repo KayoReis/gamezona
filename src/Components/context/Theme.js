@@ -1,5 +1,5 @@
-import { createContext,useState } from "react";
-import { Theme } from "../Esquemacor";
+import { createContext} from "react";
+
 
 const ThemeContext = createContext()
 
