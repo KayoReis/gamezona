@@ -19,6 +19,7 @@
     "feather-icons": "^4.29.0",
     "react": "18.2.0",
     "react-native": "0.71.8",
+    "react-native-asset": "^2.1.1",
     "react-native-event-listeners": "^1.0.7",
     "react-native-restart": "^0.0.27",
     "react-native-snap-carousel": "^3.9.1"
