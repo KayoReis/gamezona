@@ -1,6 +1,6 @@
 //imports
-import React, {useEffect } from 'react';
-import { StatusBar, Image, View} from 'react-native';
+import React, { useCallback, useEffect } from 'react';
+import { StatusBar, Image, View, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './src/pages/Home/home_index'
@@ -15,15 +15,18 @@ import Cadastro from './src/pages/Cadastro/Cadastro_index';
 import Theme from './src/Components/Esquemacor';
 import ThemeContext from './src/Components/context/Theme';
 import { EventRegister } from "react-native-event-listeners";
-
+import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen'
 //constates e variaveis
 const Tab = createBottomTabNavigator()
 const LoginStack = createStackNavigator()
-//tema
+
 
 
 //functions
 export function LoginStackScreen() {
+
+
 
   return (
     <LoginStack.Navigator screenOptions={{ headerShown: false, animation: 'none' }} initialRouteName='Login'>
@@ -45,16 +48,15 @@ export default function App() {
     }
   }, [darkMode])
 
-
+  
 
   return (
 
     //login na navegção apenas para teste
-    <ThemeContext.Provider value={darkMode === true ? Theme.dark : Theme.light}>
-      < NavigationContainer theme={darkMode === true?Theme.dark : Theme.light }  >
-
+    <ThemeContext.Provider value={darkMode === true ? Theme.dark : Theme.light} >
+      < NavigationContainer theme={darkMode === true ? Theme.dark : Theme.light}  >
+   
         <StatusBar hidden={true} />
-
         <Tab.Navigator screenOptions={{ headerShown: false, tabBarShowLabel: false }} >
           <Tab.Screen name='LoginStack' component={LoginStackScreen} />
 
