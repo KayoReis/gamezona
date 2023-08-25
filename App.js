@@ -57,8 +57,8 @@ export default function App() {
       < NavigationContainer theme={darkMode === true ? Theme.dark : Theme.light}  >
    
         <StatusBar hidden={true} />
-        <Tab.Navigator screenOptions={{ headerShown: false, tabBarShowLabel: false }} >
-          <Tab.Screen name='LoginStack' component={LoginStackScreen} />
+        <Tab.Navigator screenOptions={{ headerShown: false, tabBarShowLabel: false, tabBarHideOnKeyboard:true}} >
+          <Tab.Screen name='LoginStack' component={LoginStackScreen}/>
 
 
 
