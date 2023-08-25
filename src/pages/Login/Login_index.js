@@ -101,7 +101,7 @@ export default function Login({ navigation }) {
             <Text>Esqueceu a senha?</Text>
           </TouchableOpacity>
           <TouchableOpacity style={{flex:1}} onPress={() => navigation.navigate("Cadastro")}>
-            <Text> Cadastat</Text>
+            <Text> Cadastart</Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>
