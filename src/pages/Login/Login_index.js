@@ -105,6 +105,9 @@ export default function Login({ navigation }) {
           </TouchableOpacity>
         </View>
       </ImageBackground>
+      <Text>
+        teste
+      </Text>
     </View>
   );
 }
