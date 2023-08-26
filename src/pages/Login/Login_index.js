@@ -19,6 +19,7 @@ export default function Login({ navigation }) {
   const theme = useContext(ThemeContext);
   const [fontsLoaded] = useFonts({
     Bungee: require("../../../assets/fonts/Bungee-Regular.ttf"),
+    Arcade: require("../../../assets/fonts/PublicPixel-z84yD.ttf"),
   });
   useEffect(() => {
     async function prepare() {
@@ -51,9 +52,11 @@ export default function Login({ navigation }) {
             { color: theme.color },
             { textShadowColor: theme.sombra },
             {
+              paddingLeft: 30,
+              paddingRight: 30,
               fontSize: 40,
               fontWeight: "500",
-              textShadowRadius: 15,
+              textShadowRadius: 10,
               textTransform: "capitalize",
               letterSpacing: 3.5,
               textAlign: "justify",
@@ -87,25 +90,29 @@ export default function Login({ navigation }) {
       <ImageBackground
         resizeMode="stretch"
         source={require("../../img/Greenhill.png")}
-        style={{  justifyContent: "center",height:300 }}
+        style={{ justifyContent: "center", height: 300 }}
       >
         <View>
-          <TouchableOpacity
+          <TouchableOpacity onPress={() => navigation.navigate("Home")}
             style={[Estilo.logar_button, { borderColor: theme.button_border }]}
           >
-            <Text style={[Estilo.logar_text]}>Start</Text>
+            <Text style={[Estilo.logar_text, { fontFamily: "Arcade" }]}>
+              START
+            </Text>
           </TouchableOpacity>
         </View>
-        <View style={{ flexDirection:"row-reverse" }}>
-          <TouchableOpacity >
-            <Text>Esqueceu a senha?</Text>
+        <View style={[{ flexDirection: "row-reverse" }, Estilo.text_options]}>
+          <TouchableOpacity>
+            <Text style={[{fontFamily:"Arcade",fontSize:10},Estilo.option_style]}>Esqueceu a senha?</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={{flex:1}} onPress={() => navigation.navigate("Cadastro")}>
-            <Text> Cadastart</Text>
+          <TouchableOpacity
+            style={{ flex: 1 }}
+            onPress={() => navigation.navigate("Cadastro")}
+          >
+            <Text style={[{fontFamily:"Arcade",fontSize:10},Estilo.option_style]}> Cadastart</Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>
-      
     </View>
   );
 }

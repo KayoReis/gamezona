@@ -29,7 +29,7 @@ export function LoginStackScreen() {
 
 
   return (
-    <LoginStack.Navigator screenOptions={{ headerShown: false, animation: 'none' }} initialRouteName='Login'>
+    <LoginStack.Navigator screenOptions={{ headerShown: false,animationEnabled:true,animationTypeForReplace:'pop' }} initialRouteName='Login'>
       <LoginStack.Screen name="Login" component={Login} />
       <LoginStack.Screen name="Cadastro" component={Cadastro} />
     </LoginStack.Navigator>

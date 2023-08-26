@@ -17,21 +17,25 @@
     "expo": "~48.0.18",
     "expo-app-loading": "^2.1.1",
     "expo-font": "~11.1.1",
+    "expo-splash-screen": "~0.18.2",
     "expo-status-bar": "~1.4.4",
     "feather-icons": "^4.29.0",
     "react": "18.2.0",
     "react-native": "0.71.8",
     "react-native-asset": "^2.1.1",
     "react-native-event-listeners": "^1.0.7",
+    "react-native-outlined-text": "^0.5.0",
     "react-native-restart": "^0.0.27",
     "react-native-snap-carousel": "^3.9.1",
-    "expo-splash-screen": "~0.18.2"
+    "react-native-svg": "13.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
   },
   "private": true,
-  "rnpm":{
-"assests":["./assests/fonts"]
+  "rnpm": {
+    "assests": [
+      "./assests/fonts"
+    ]
   }
 }
