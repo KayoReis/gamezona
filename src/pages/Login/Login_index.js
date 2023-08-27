@@ -20,6 +20,7 @@ export default function Login({ navigation }) {
   const [fontsLoaded] = useFonts({
     Bungee: require("../../../assets/fonts/Bungee-Regular.ttf"),
     Arcade: require("../../../assets/fonts/PublicPixel-z84yD.ttf"),
+    GameStation: require("../../../assets/fonts/GamestationCond.otf")
   });
   useEffect(() => {
     async function prepare() {
@@ -77,20 +78,20 @@ export default function Login({ navigation }) {
           <TextInput
             placeholder="E-mail/nick"
             placeholderTextColor={"black"}
-            style={[{ backgroundColor: theme.input_border }, Estilo.inputs]}
+            style={[{ backgroundColor: theme.input_border,fontFamily:'GameStation',fontSize:24 }, Estilo.inputs]}
           />
 
           <TextInput
             placeholder="Senha"
             placeholderTextColor={"black"}
-            style={[{ backgroundColor: theme.input_border }, Estilo.inputs]}
+            style={[{ backgroundColor: theme.input_border,fontFamily:'GameStation',fontSize:24 }, Estilo.inputs]}
           />
         </KeyboardAvoidingView>
       </View>
       <ImageBackground
         resizeMode="stretch"
-        source={require("../../img/Greenhill.png")}
-        style={{ justifyContent: "center", height: 300 }}
+        source={require("../../img/Green.png")}
+        style={{ justifyContent: "center" }}
       >
         <View>
           <TouchableOpacity onPress={() => navigation.navigate("Home")}
