@@ -112,12 +112,12 @@ export default function Cadastro({ navigate }) {
           />
         </View>
         <View style={{flexDirection:"row"}}>
-          <Image/>
+          <Image source={require('../../img/warning.png')}/>
           <View style={{flexDirection:"column"}}>
-            <Text>SUA SENHA DEVE CONTER:</Text>
-            <Text>8 ou + caracteres</Text>
-            <Text>Letra Maiscula</Text>
-            <Text>Número</Text>
+            <Text style={[{color:theme.color}]}>SUA SENHA DEVE CONTER:</Text>
+            <Text style={[{color:theme.color}]} >8 ou + caracteres</Text>
+            <Text style={[{color:theme.color}]}>Letra Maiscula</Text>
+            <Text style={[{color:theme.color}]}>Número</Text>
           </View>
         </View>
       </KeyboardAvoidingView>
