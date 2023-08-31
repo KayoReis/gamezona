@@ -6,6 +6,7 @@ const Theme = {
     sombra: '#32cd32',
     input_border: "#808080",
     button_border: "black",
+    border_color:'',
     colors: {
       background: 'rgb(190,190,190)',
       card: 'rgb(128,128,128)',
@@ -20,6 +21,7 @@ const Theme = {
     sombra: '#00ff00',
     input_border: "#464646",
     button_border: "white",
+    border_color:"",
     colors: {
       background: 'rgb(20,20,20)',
       card: 'rgb(70,70,70)',
