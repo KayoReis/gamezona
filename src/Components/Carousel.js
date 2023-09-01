@@ -55,9 +55,24 @@ export default function Carousel({ data }) {
           <View style={{ width: SIZE }} key={index}>
             <View style={styles.imageContainer}>
               <Image source={item.image} style={styles.image} />
-              <View style={{alignItems:"center",alignContent:"center",alignSelf:"flex-start",backgroundColor:theme.input_border,paddingRight:0.5,borderWidth:2,marginBottom:10,borderLeftColor:"#228b22",borderRightColor:"#228b22",borderBottomColor:"#228b22"}}>
-              <Text style={[styles.text,{color:theme.color}]}>{item.text}</Text>
-                </View>
+              <View
+                style={{
+                  alignItems: "center",
+                  alignContent: "center",
+                  alignSelf: "flex-start",
+                  backgroundColor: theme.input_border,
+                  paddingRight: 0.5,
+                  borderWidth: 2,
+                  marginBottom: 10,
+                  borderLeftColor: "#228b22",
+                  borderRightColor: "#228b22",
+                  borderBottomColor: "#228b22",
+                }}
+              >
+                <Text style={[styles.text, { color: theme.color }]}>
+                  {item.text}
+                </Text>
+              </View>
             </View>
           </View>
         );
@@ -76,5 +91,12 @@ const styles = StyleSheet.create({
     height: undefined,
     aspectRatio: 1,
   },
-  text: {fontFamily:'GameStation',fontSize:19,justifyContent:"center",marginRight:20,marginLeft:10,marginBottom:10},
+  text: {
+    fontFamily: "GameStation",
+    fontSize: 19,
+    justifyContent: "center",
+    marginRight: 20,
+    marginLeft: 10,
+    marginBottom: 10,
+  },
 });
