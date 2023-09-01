@@ -37,7 +37,7 @@ export default function Home() {
   let numero = Math.floor(Math.random() * (5 - 1 + 1) + 1);
   let gif;
   let icon;
-  numero = 9;
+  numero = 3;
 
   switch (numero) {
     case 1:
@@ -126,6 +126,18 @@ export default function Home() {
             <Image source={require("../../img/crash.gif")} style={{height:125,width:125,marginLeft:10}}/>
           </View>)
           break
+          case 10:
+            gif = (
+              <View>
+                <Image source={require("../../img/link.gif")} style={{height:150,width:125,marginLeft:10}}/>
+              </View>)
+              break
+              case 11:
+                gif = (
+                  <View>
+                    <Image source={require("../../img/cloud.gif")} style={{height:91.7,width:126.7,marginTop:20}}/>
+                  </View>)
+                  break
     default:
       break;
   }
