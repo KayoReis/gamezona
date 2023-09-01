@@ -218,7 +218,7 @@ export default function Home() {
               style={{ width: "100%", height: SIZE }}
             />
           </View>
-          <View style={{ paddingHorizontal: 50, borderBottomWidth: 5 }}>
+          <View style={{ paddingHorizontal: 50, borderBottomWidth: 2, borderBottomColor:theme.input_border }}>
             <View
               style={{
                 backgroundColor: theme.input_border,
