@@ -37,12 +37,13 @@ export default function Home() {
   let numero = Math.floor(Math.random() * (5 - 1 + 1) + 1);
   let gif;
   let icon
+  numero=1
 
   switch (numero) {
     case 1:
       gif = (
         <View>
-          <Image source={require("../../img/shop.png")} />
+          <Image source={require("../../img/among.gif")} style={{width:100, height:100,marginTop:"50%",marginLeft:5}} />
         </View>
       );
       break;
