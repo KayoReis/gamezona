@@ -34,10 +34,10 @@ export default function Home() {
     },
   ];
 
-  let numero = Math.floor(Math.random() * (5 - 1 + 1) + 1);
+  let numero = Math.floor(Math.random() * (12 - 1 + 1) + 1);
   let gif;
   let icon;
-  numero = 3;
+  
 
   switch (numero) {
     case 1:
@@ -63,10 +63,26 @@ export default function Home() {
     case 3:
       gif = (
         <View>
-          <Image
-            source={require("../../img/squirtle.gif")}
-            style={{ marginTop: "50%", height: 100, width: 100 }}
-          />
+          <View style={{ flexDirection: "row",marginTop:20 }}>
+            <Image
+              source={require("../../img/squirtle.gif")}
+              style={{  height: 50, width: 50 }}
+            />
+            <Image
+              source={require("../../img/pikachu.gif")}
+              style={{ width: 50, height: 50 }}
+            />
+          </View>
+          <View style={{ flexDirection: "row" }}>
+            <Image
+              source={require("../../img/bulbassauro.gif")}
+              style={{ width: 50, height: 50 }}
+            />
+            <Image
+              source={require("../../img/charmander.gif")}
+              style={{ width: 50, height: 50 }}
+            />
+          </View>
         </View>
       );
       break;
@@ -120,24 +136,61 @@ export default function Home() {
         </View>
       );
       break;
-      case 9:
+    case 9:
+      gif = (
+        <View>
+          <Image
+            source={require("../../img/crash.gif")}
+            style={{ height: 125, width: 125, marginLeft: 10 }}
+          />
+        </View>
+      );
+      break;
+    case 10:
+      gif = (
+        <View>
+          <Image
+            source={require("../../img/link.gif")}
+            style={{ height: 150, width: 125, marginLeft: 10 }}
+          />
+        </View>
+      );
+      break;
+    case 11:
+      gif = (
+        <View>
+          <Image
+            source={require("../../img/cloud.gif")}
+            style={{ height: 91.7, width: 126.7, marginTop: 20 }}
+          />
+        </View>
+      );
+      break;
+      case 12:
         gif = (
           <View>
-            <Image source={require("../../img/crash.gif")} style={{height:125,width:125,marginLeft:10}}/>
-          </View>)
-          break
-          case 10:
-            gif = (
-              <View>
-                <Image source={require("../../img/link.gif")} style={{height:150,width:125,marginLeft:10}}/>
-              </View>)
-              break
-              case 11:
-                gif = (
-                  <View>
-                    <Image source={require("../../img/cloud.gif")} style={{height:91.7,width:126.7,marginTop:20}}/>
-                  </View>)
-                  break
+            <View style={{ flexDirection: "row" ,marginTop:20}}>
+              <Image
+                source={require("../../img/freddy.gif")}
+                style={{  height: 50, width: 50 }}
+              />
+              <Image
+                source={require("../../img/bonny.gif")}
+                style={{ width: 50, height: 50, }}
+              />
+            </View>
+            <View style={{ flexDirection: "row" }}>
+              <Image
+                source={require("../../img/chika.gif")}
+                style={{ width: 50, height: 50 }}
+              />
+              <Image
+                source={require("../../img/foxy.gif")}
+                style={{ width: 50, height: 50 }}
+              />
+            </View>
+          </View>
+        );
     default:
       break;
   }
