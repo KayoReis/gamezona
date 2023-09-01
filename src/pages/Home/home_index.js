@@ -36,6 +36,7 @@ export default function Home() {
 
   let numero = Math.floor(Math.random() * (5 - 1 + 1) + 1);
   let gif;
+  let icon
 
   switch (numero) {
     case 1:
@@ -75,6 +76,88 @@ export default function Home() {
       break;
     default:
       break;
+  }
+  switch (check){
+    case "Nada":
+      icon = (<View style={{ flexDirection: "row",marginTop:10}}>
+      <TouchableOpacity onPress={()=>Setcheck("Sony")}>
+      <Image source={require('../../img/Sony.png')} style={{width:32,height:32}}/>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>Setcheck("Steam")}>
+      <Image source={require('../../img/Steam.png')} style={style.icons}/>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>Setcheck("Xbox")}>
+      <Image source={require('../../img/Xbox.png')} style={style.icons}/>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>Setcheck("Eshop")}>
+      <Image source={require('../../img/Eshop.png')} style={style.icons}/>
+      </TouchableOpacity>
+    </View>)
+    break;
+    case "Sony":
+      icon = (<View style={{ flexDirection: "row",marginTop:10}}>
+      <TouchableOpacity onPress={()=>Setcheck("Nada")}>
+      <Image source={require('../../img/Sony.png')} style={{width:32,height:32,borderWidth:2,borderColor:"#1e90ff",borderRadius:40}}/>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>Setcheck("Steam")}>
+      <Image source={require('../../img/Steam.png')} style={style.icons}/>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>Setcheck("Xbox")}>
+      <Image source={require('../../img/Xbox.png')} style={style.icons}/>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>Setcheck("Eshop")}>
+      <Image source={require('../../img/Eshop.png')} style={style.icons}/>
+      </TouchableOpacity>
+    </View>)
+    break;
+    case "Steam":
+      icon=(<View style={{ flexDirection: "row",marginTop:10}}>
+      <TouchableOpacity onPress={()=>Setcheck("Sony")}>
+      <Image source={require('../../img/Sony.png')} style={{width:32,height:32}}/>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>Setcheck("Nada")}>
+      <Image source={require('../../img/Steam.png')} style={[style.icons,{borderWidth:2,borderColor:"#DCDCDC",borderRadius:40}]}/>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>Setcheck("Xbox")}>
+      <Image source={require('../../img/Xbox.png')} style={style.icons}/>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>Setcheck("Eshop")}>
+      <Image source={require('../../img/Eshop.png')} style={style.icons}/>
+      </TouchableOpacity>
+    </View>)
+    break
+    case "Xbox":
+      icon=<View style={{ flexDirection: "row",marginTop:10}}>
+      <TouchableOpacity onPress={()=>Setcheck("Sony")}>
+      <Image source={require('../../img/Sony.png')} style={{width:32,height:32}}/>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>Setcheck("Steam")}>
+      <Image source={require('../../img/Steam.png')} style={style.icons}/>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>Setcheck("Nada")}>
+      <Image source={require('../../img/Xbox.png')} style={[style.icons,{borderWidth:2,borderRadius:40,borderColor:"#7fff00"}]}/>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>Setcheck("Eshop")}>
+      <Image source={require('../../img/Eshop.png')} style={style.icons}/>
+      </TouchableOpacity>
+    </View>
+    break;
+    case "Eshop":
+      icon=(<View style={{ flexDirection: "row",marginTop:10}}>
+      <TouchableOpacity onPress={()=>Setcheck("Sony")}>
+      <Image source={require('../../img/Sony.png')} style={{width:32,height:32}}/>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>Setcheck("Steam")}>
+      <Image source={require('../../img/Steam.png')} style={[style.icons,{borderWidth:2}]}/>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>Setcheck("Xbox")}>
+      <Image source={require('../../img/Xbox.png')} style={style.icons}/>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>Setcheck("Nada")}>
+      <Image source={require('../../img/Eshop.png')} style={[style.icons,{borderWidth:2,borderRadius:40,borderColor:"#800000"}]}/>
+      </TouchableOpacity>
+    </View>)
+    break;
   }
   const [fontsLoaded] = useFonts({
     Bungee: require("../../../assets/fonts/Bungee-Regular.ttf"),
@@ -116,20 +199,7 @@ export default function Home() {
               >
                 Qual a boa?
               </Text>
-              <View style={{ flexDirection: "row",marginTop:10}}>
-                <TouchableOpacity onPress={()=>Setcheck("Sony")}>
-                <Image source={require('../../img/Sony.png')} style={{width:32,height:32}}/>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={()=>Setcheck("Steam")}>
-                <Image source={require('../../img/Steam.png')} style={style.icons}/>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={()=>Setcheck("Xbox")}>
-                <Image source={require('../../img/Xbox.png')} style={style.icons}/>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={()=>Setcheck("Eshop")}>
-                <Image source={require('../../img/Eshop.png')} style={style.icons}/>
-                </TouchableOpacity>
-              </View>
+              {icon}
             </View>
           </View>
           <View style={{ marginLeft: 10, marginRight: 10 }}>{gif}</View>
@@ -185,8 +255,8 @@ export default function Home() {
             </View>
           </View>
           <View>
-            <Text style={[{ color: theme.color, fontFamily: "GameStation", marginLeft:10, fontSize:20,marginTop:5,marginBottom:5 }]}>
-              Notícias
+            <Text style={[{ color: theme.color, fontFamily: "Bungee", marginLeft:10, fontSize:20,marginTop:5,marginBottom:5 }]}>
+              Notícias:
             </Text>
             <View style={{ height: "74%" }}>
               <Carousel data={data} />
