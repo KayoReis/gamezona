@@ -20,7 +20,7 @@ export default function Login({ navigation }) {
   const [fontsLoaded] = useFonts({
     Bungee: require("../../../assets/fonts/Bungee-Regular.ttf"),
     Arcade: require("../../../assets/fonts/PublicPixel-z84yD.ttf"),
-    GameStation: require("../../../assets/fonts/GamestationCond.otf")
+    GameStation: require("../../../assets/fonts/GamestationCond.otf"),
   });
   useEffect(() => {
     async function prepare() {
@@ -78,13 +78,27 @@ export default function Login({ navigation }) {
           <TextInput
             placeholder="E-mail/nick"
             placeholderTextColor={"black"}
-            style={[{ backgroundColor: theme.input_border,fontFamily:'GameStation',fontSize:24 }, Estilo.inputs]}
+            style={[
+              {
+                backgroundColor: theme.input_border,
+                fontFamily: "GameStation",
+                fontSize: 24,
+              },
+              Estilo.inputs,
+            ]}
           />
 
           <TextInput
             placeholder="Senha"
             placeholderTextColor={"black"}
-            style={[{ backgroundColor: theme.input_border,fontFamily:'GameStation',fontSize:24 }, Estilo.inputs]}
+            style={[
+              {
+                backgroundColor: theme.input_border,
+                fontFamily: "GameStation",
+                fontSize: 24,
+              },
+              Estilo.inputs,
+            ]}
           />
         </KeyboardAvoidingView>
       </View>
@@ -94,7 +108,8 @@ export default function Login({ navigation }) {
         style={{ justifyContent: "center" }}
       >
         <View>
-          <TouchableOpacity onPress={() => navigation.navigate("Home")}
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Home")}
             style={[Estilo.logar_button, { borderColor: theme.button_border }]}
           >
             <Text style={[Estilo.logar_text, { fontFamily: "Arcade" }]}>
@@ -104,13 +119,28 @@ export default function Login({ navigation }) {
         </View>
         <View style={[{ flexDirection: "row-reverse" }, Estilo.text_options]}>
           <TouchableOpacity>
-            <Text style={[{fontFamily:"Arcade",fontSize:10},Estilo.option_style]}>Esqueceu a senha?</Text>
+            <Text
+              style={[
+                { fontFamily: "Arcade", fontSize: 10 },
+                Estilo.option_style,
+              ]}
+            >
+              Esqueceu a senha?
+            </Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={{ flex: 1 }}
             onPress={() => navigation.navigate("Cadastro")}
           >
-            <Text style={[{fontFamily:"Arcade",fontSize:10},Estilo.option_style]}> Cadastart</Text>
+            <Text
+              style={[
+                { fontFamily: "Arcade", fontSize: 10 },
+                Estilo.option_style,
+              ]}
+            >
+              {" "}
+              Cadastart
+            </Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>

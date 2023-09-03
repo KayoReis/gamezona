@@ -7,6 +7,6 @@ import ThemeContext from "../../Components/context/Theme";
 export default function Community(){
     const theme = useContext(ThemeContext)
     return(
-        <View><Text style={[{color:theme.color}]}>Essa é a página de comunidade</Text></View>
+        <View><Text style={[{color:theme.color}]}>Essa é a página de comunidade (Necessario um banco de dado e uma api)</Text></View>
     )
 }

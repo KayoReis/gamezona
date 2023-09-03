@@ -190,24 +190,24 @@ export default function Cadastro({ navigation }) {
       </View>
       <View style={{ marginLeft: 60, marginTop: 10 }}>
         <TouchableOpacity>
-        <Text style={{ fontFamily: "Cristik", color: "#00abff" }}>
-          Termos de uso
-        </Text>
+          <Text style={{ fontFamily: "Cristik", color: "#00abff" }}>
+            Termos de uso
+          </Text>
         </TouchableOpacity>
       </View>
       <ImageBackground
         source={require("../../img/stage.png")}
         resizeMode="stretch"
-        style={{height:"50%"}}
+        style={{ height: "50%" }}
       >
-       
         <TouchableOpacity
           onPress={() => navigation.navigate("Login")}
           style={[style.cadastro_button, { borderColor: theme.button_border }]}
         >
-          <Text style={[style.cadastro_text,{ fontFamily: "Arcade" }]}>INSERT A COIN</Text>
+          <Text style={[style.cadastro_text, { fontFamily: "Arcade" }]}>
+            INSERT A COIN
+          </Text>
         </TouchableOpacity>
-        
       </ImageBackground>
     </View>
   );

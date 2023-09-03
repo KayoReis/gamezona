@@ -34,12 +34,13 @@ export default function Home() {
     },
   ];
 
-  let numero = Math.floor(Math.random() * (12 - 1 + 1) + 1);
+  let alenum = Math.floor(Math.random() * (12 - 1 + 1) + 1);
   let gif;
   let icon;
-  
 
-  switch (numero) {
+
+  //Switch para gifs
+  switch (alenum) {
     case 1:
       gif = (
         <View>
@@ -63,10 +64,10 @@ export default function Home() {
     case 3:
       gif = (
         <View>
-          <View style={{ flexDirection: "row",marginTop:20 }}>
+          <View style={{ flexDirection: "row", marginTop: 20 }}>
             <Image
               source={require("../../img/squirtle.gif")}
-              style={{  height: 50, width: 50 }}
+              style={{ height: 50, width: 50 }}
             />
             <Image
               source={require("../../img/pikachu.gif")}
@@ -166,34 +167,35 @@ export default function Home() {
         </View>
       );
       break;
-      case 12:
-        gif = (
-          <View>
-            <View style={{ flexDirection: "row" ,marginTop:20}}>
-              <Image
-                source={require("../../img/freddy.gif")}
-                style={{  height: 50, width: 50 }}
-              />
-              <Image
-                source={require("../../img/bonny.gif")}
-                style={{ width: 50, height: 50, }}
-              />
-            </View>
-            <View style={{ flexDirection: "row" }}>
-              <Image
-                source={require("../../img/chika.gif")}
-                style={{ width: 50, height: 50 }}
-              />
-              <Image
-                source={require("../../img/foxy.gif")}
-                style={{ width: 50, height: 50 }}
-              />
-            </View>
+    case 12:
+      gif = (
+        <View>
+          <View style={{ flexDirection: "row", marginTop: 20 }}>
+            <Image
+              source={require("../../img/freddy.gif")}
+              style={{ height: 50, width: 50 }}
+            />
+            <Image
+              source={require("../../img/bonny.gif")}
+              style={{ width: 50, height: 50 }}
+            />
           </View>
-        );
+          <View style={{ flexDirection: "row" }}>
+            <Image
+              source={require("../../img/chika.gif")}
+              style={{ width: 50, height: 50 }}
+            />
+            <Image
+              source={require("../../img/foxy.gif")}
+              style={{ width: 50, height: 50 }}
+            />
+          </View>
+        </View>
+      );
     default:
       break;
   }
+  //Switch para os icones
   switch (check) {
     case "Nada":
       icon = (
@@ -231,7 +233,7 @@ export default function Home() {
               style={{
                 width: 32,
                 height: 32,
-                borderWidth: 2,
+                borderWidth: 3,
                 borderColor: "#1e90ff",
                 borderRadius: 40,
               }}
@@ -269,7 +271,7 @@ export default function Home() {
               source={require("../../img/Steam.png")}
               style={[
                 style.icons,
-                { borderWidth: 2, borderColor: "#DCDCDC", borderRadius: 40 },
+                { borderWidth: 3, borderColor: "#66cdaa", borderRadius: 40 },
               ]}
             />
           </TouchableOpacity>
@@ -305,7 +307,7 @@ export default function Home() {
               source={require("../../img/Xbox.png")}
               style={[
                 style.icons,
-                { borderWidth: 2, borderRadius: 40, borderColor: "#7fff00" },
+                { borderWidth: 3, borderRadius: 40, borderColor: "#7fff00" },
               ]}
             />
           </TouchableOpacity>
@@ -341,7 +343,7 @@ export default function Home() {
               source={require("../../img/Eshop.png")}
               style={[
                 style.icons,
-                { borderWidth: 2, borderRadius: 40, borderColor: "#800000" },
+                { borderWidth: 3, borderRadius: 40, borderColor: "#800000" },
               ]}
             />
           </TouchableOpacity>
@@ -471,6 +473,7 @@ export default function Home() {
           </View>
         </View>
       </View>
+  
     </ScrollView>
   );
 }

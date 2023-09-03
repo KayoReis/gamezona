@@ -1,35 +1,48 @@
-
 const Theme = {
   light: {
     dark: false,
-    color: 'black',
-    sombra: '#32cd32',
+    color: "black",
+    sombra: "#32cd32",
     input_border: "#808080",
     button_border: "black",
-    border_color:'',
+    border_color: "darkgray",
+    border_color2: "#1c1c1c",
     colors: {
-      background: 'rgb(190,190,190)',
-      card: 'rgb(128,128,128)',
-      text: 'rgb(0,0,0)',
-      border: 'rgb(0,0,0)',
-      notification: 'rgb(255,0,0)'
-    }
+      background: "rgb(190,190,190)",
+      card: "rgb(128,128,128)",
+      text: "rgb(0,0,0)",
+      border: "rgb(0,0,0)",
+      notification: "rgb(255,0,0)",
+    },
+    opacidade: 0.5,
+    sonytext: "#0000ff",
+    xboxtext: "#32cd32",
+    steamtext: "#7fffd4",
+    nintendotext: "#a52a2a",
+    lamp: true,
   },
   dark: {
     dark: true,
-    color: 'white',
-    sombra: '#00ff00',
+    color: "white",
+    sombra: "#00ff00",
     input_border: "#464646",
     button_border: "white",
-    border_color:"",
+    border_color: "white",
+    border_color2: "#a9a9a9",
     colors: {
-      background: 'rgb(20,20,20)',
-      card: 'rgb(70,70,70)',
-      text: 'rgb(0,0,0)',
-      border: 'rgb(255,255,255)',
-      notification: 'rgb(255,0,0)'
+      background: "rgb(20,20,20)",
+      card: "rgb(70,70,70)",
+      text: "rgb(0,0,0)",
+      border: "rgb(255,255,255)",
+      notification: "rgb(255,0,0)",
     },
-  }
+    opacidade: 0.2,
+    sonytext: "#1e90ff",
+    xboxtext: "#7fff00",
+    steamtext: "#66cdaa",
+    nintendotext: "#b22222",
+    lamp: false,
+  },
 };
 
-export default Theme
+export default Theme;
